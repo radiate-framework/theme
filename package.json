@@ -1,0 +1,9 @@
+{
+  "name": "radiate-theme",
+  "version": "1.0.0",
+  "description": "A WordPress theme boilerplate",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ben Rutland",
+  "license": "MIT"
+}

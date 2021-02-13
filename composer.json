@@ -1,0 +1,28 @@
+{
+  "name": "brw/radiate-theme",
+  "description": "A WordPress theme boilerplate",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ben Rutland",
+      "email": "info@benrutlandweb.co.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Theme\\": "app/"
+    }
+  },
+  "require": {
+    "php": "^7.3",
+    "brw/radiate-framework": "^1.0"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "npm install"
+    ]
+  }
+}

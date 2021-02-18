@@ -73,9 +73,9 @@ $app->register(Radiate\Routing\RoutingServiceProvider::class);
 $app->register(Radiate\View\ViewServiceProvider::class);
 $app->register(Radiate\WordPress\WordPressServiceProvider::class);
 
-$app->register(Theme\Providers\CptServiceProvider::class);
 $app->register(Theme\Providers\EventServiceProvider::class);
 $app->register(Theme\Providers\RouteServiceProvider::class);
+$app->register(Theme\Providers\WordPressServiceProvider::class);
 
 
 /**
@@ -88,5 +88,4 @@ $app->register(Theme\Providers\RouteServiceProvider::class);
  *  application we have prepared for them.
  *
  */
-
 $app->boot();

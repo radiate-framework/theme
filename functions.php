@@ -12,8 +12,6 @@
  *
  */
 
-use Radiate\Http\Request;
-
 require __DIR__ . '/vendor/autoload.php';
 
 

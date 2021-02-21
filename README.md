@@ -5,7 +5,9 @@
 
 # Radiate Theme
 
-A WordPress theme boilerplate
+A WordPress theme boilerplate.
+
+Read the full [Radiate framework documentation](https://radiate-framework.github.io/).
 
 ## Installation
 

@@ -12,6 +12,8 @@
  *
  */
 
+use Radiate\Http\Request;
+
 require __DIR__ . '/vendor/autoload.php';
 
 
@@ -68,6 +70,7 @@ $app->routeMiddleware([
  */
 
 $app->register(Radiate\Auth\AuthServiceProvider::class);
+$app->register(Radiate\Foundation\Providers\FormRequestServiceProvider::class);
 $app->register(Radiate\Mail\MailServiceProvider::class);
 $app->register(Radiate\Routing\RoutingServiceProvider::class);
 $app->register(Radiate\Validation\ValidationServiceProvider::class);

@@ -92,4 +92,5 @@ $app->register(Theme\Providers\WordPressServiceProvider::class);
  *  application we have prepared for them.
  *
  */
+
 $app->boot();

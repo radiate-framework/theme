@@ -77,6 +77,7 @@ $app->register(Radiate\WordPress\WordPressServiceProvider::class);
 
 $app->register(Theme\Providers\EventServiceProvider::class);
 $app->register(Theme\Providers\RouteServiceProvider::class);
+$app->register(Theme\Providers\ThemeServiceProvider::class);
 $app->register(Theme\Providers\WordPressServiceProvider::class);
 
 

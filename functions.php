@@ -46,14 +46,9 @@ $app->middleware([
 ]);
 
 $app->routeMiddleware([
-    'auth' => Radiate\Auth\Middleware\Authenticate::class,
-    'ajax' => [
-        //
-    ],
-    'api' => [
-        //
-    ],
-    'signed' => Radiate\Routing\Middleware\ValidateSignature::class,
+    'auth'       => Radiate\Auth\Middleware\Authenticate::class,
+    'auth.basic' => Radiate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+    'signed'     => Radiate\Routing\Middleware\ValidateSignature::class,
 ]);
 
 

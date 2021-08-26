@@ -46,13 +46,9 @@ $app->middleware([
 ]);
 
 $app->routeMiddleware([
-    'auth' => Radiate\Auth\Middleware\Authenticate::class,
-    'ajax' => [
-        //
-    ],
-    'api' => [
-        //
-    ],
+    'auth'       => Radiate\Auth\Middleware\Authenticate::class,
+    'auth.basic' => Radiate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+    'signed'     => Radiate\Routing\Middleware\ValidateSignature::class,
 ]);
 
 
@@ -68,16 +64,56 @@ $app->routeMiddleware([
  */
 
 $app->register(Radiate\Auth\AuthServiceProvider::class);
+$app->register(Radiate\Cache\CacheServiceProvider::class);
+$app->register(Radiate\Database\DatabaseServiceProvider::class);
 $app->register(Radiate\Foundation\Providers\FormRequestServiceProvider::class);
 $app->register(Radiate\Mail\MailServiceProvider::class);
 $app->register(Radiate\Routing\RoutingServiceProvider::class);
+$app->register(Radiate\Schedule\ScheduleServiceProvider::class);
 $app->register(Radiate\Validation\ValidationServiceProvider::class);
 $app->register(Radiate\View\ViewServiceProvider::class);
 $app->register(Radiate\WordPress\WordPressServiceProvider::class);
 
 $app->register(Theme\Providers\EventServiceProvider::class);
 $app->register(Theme\Providers\RouteServiceProvider::class);
+$app->register(Theme\Providers\ScheduleServiceProvider::class);
+$app->register(Theme\Providers\ThemeServiceProvider::class);
 $app->register(Theme\Providers\WordPressServiceProvider::class);
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ *  Class Aliases
+ * -----------------------------------------------------------------------------
+ *
+ * This array of class aliases will be registered when this application
+ * is started. However, feel free to register as many as you wish as
+ * the aliases are "lazy" loaded so they don't hinder performance.
+ *
+ */
+
+$app->aliases([
+    'App'        => \Radiate\Support\Facades\App::class,
+    'Arr'        => \Radiate\Support\Arr::class,
+    'Auth'       => \Radiate\Support\Facades\Auth::class,
+    'Cache'      => \Radiate\Support\Facades\Cache::class,
+    'Collection' => \Radiate\Support\Collection::class,
+    'Config'     => \Radiate\Support\Facades\Config::class,
+    'DB'         => \Radiate\Support\Facades\DB::class,
+    'Event'      => \Radiate\Support\Facades\Event::class,
+    'File'       => \Radiate\Support\Facades\File::class,
+    'Hash'       => \Radiate\Support\Hash::class,
+    'Http'       => \Radiate\Support\Facades\Http::class,
+    'Mail'       => \Radiate\Support\Facades\Mail::class,
+    'Option'     => \Radiate\Support\Facades\Option::class,
+    'Request'    => \Radiate\Support\Facades\Request::class,
+    'Route'      => \Radiate\Support\Facades\Route::class,
+    'Str'        => \Radiate\Support\Str::class,
+    'URL'        => \Radiate\Support\Facades\URL::class,
+    'Validator'  => \Radiate\Support\Facades\Validator::class,
+    'View'       => \Radiate\Support\Facades\View::class,
+]);
 
 
 /**

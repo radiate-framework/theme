@@ -1,7 +1,5 @@
 <?php
 
-use Radiate\Support\Facades\App;
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -12,5 +10,5 @@ return [
     |
     */
 
-    'path' => App::basePath('views'),
+    'path' => base_path('resources/views'),
 ];

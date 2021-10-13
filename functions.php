@@ -74,6 +74,7 @@ $app->register(Radiate\Validation\ValidationServiceProvider::class);
 $app->register(Radiate\View\ViewServiceProvider::class);
 $app->register(Radiate\WordPress\WordPressServiceProvider::class);
 
+$app->register(Theme\Providers\AuthServiceProvider::class);
 $app->register(Theme\Providers\EventServiceProvider::class);
 $app->register(Theme\Providers\RouteServiceProvider::class);
 $app->register(Theme\Providers\ScheduleServiceProvider::class);

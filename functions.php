@@ -66,14 +66,16 @@ $app->routeMiddleware([
 $app->register(Radiate\Auth\AuthServiceProvider::class);
 $app->register(Radiate\Cache\CacheServiceProvider::class);
 $app->register(Radiate\Database\DatabaseServiceProvider::class);
+$app->register(Radiate\Encryption\EncryptionServiceProvider::class);
 $app->register(Radiate\Foundation\Providers\FormRequestServiceProvider::class);
+$app->register(Radiate\Hashing\HashServiceProvider::class);
+$app->register(Radiate\JWT\JwtServiceProvider::class);
 $app->register(Radiate\Mail\MailServiceProvider::class);
 $app->register(Radiate\Routing\RoutingServiceProvider::class);
 $app->register(Radiate\Schedule\ScheduleServiceProvider::class);
 $app->register(Radiate\Validation\ValidationServiceProvider::class);
 $app->register(Radiate\View\ViewServiceProvider::class);
 $app->register(Radiate\WordPress\WordPressServiceProvider::class);
-
 $app->register(Theme\Providers\AuthServiceProvider::class);
 $app->register(Theme\Providers\EventServiceProvider::class);
 $app->register(Theme\Providers\RouteServiceProvider::class);
@@ -108,6 +110,7 @@ $app->aliases([
     'Gate'       => \Radiate\Support\Facades\Gate::class,
     'Hash'       => \Radiate\Support\Facades\Hash::class,
     'Http'       => \Radiate\Support\Facades\Http::class,
+    'JWT'        => \Radiate\Support\Facades\JWT::class,
     'Mail'       => \Radiate\Support\Facades\Mail::class,
     'Option'     => \Radiate\Support\Facades\Option::class,
     'Request'    => \Radiate\Support\Facades\Request::class,
